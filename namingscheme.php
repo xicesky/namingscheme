@@ -1,3 +1,4 @@
+#!/usr/bin/php5
 <?php
 
     $re_video_suffix = "#\\.(avi|mp4|mkv)$#";
@@ -26,6 +27,7 @@
     $re_tags = array(
         array("#^(PROPER|REPACK|iNTERNAL)#", 1),    # Common simple tags
         array("#^((HDTV|DVD|XVID|X264|720p|WEBRIP)[^.]*)#i", 1),   # Common tag prefixes
+        array("#^((sub\\W(en|de|fr)))#i", array('#\\.#', ' ')),   # Sub tag
         array("#^(\\[([^\\]]+)\\])#", 2),   # Tag in brackets = good
         );
     
